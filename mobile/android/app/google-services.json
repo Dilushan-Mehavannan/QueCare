@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "351808824607",
+    "project_id": "queuecare-741d3",
+    "storage_bucket": "queuecare-741d3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351808824607:android:ebfd77e930e5c0d15ffc2a",
+        "android_client_info": {
+          "package_name": "com.queuecare.mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiC0jpEW-Gzefk3UEfwZXlLGXswQ0Ijjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

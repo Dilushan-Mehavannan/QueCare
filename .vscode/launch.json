@@ -1,0 +1,61 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Backend (NestJS)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "start:dev"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "queue-care",
+        "order": 1
+      }
+    },
+    {
+      "name": "Dashboard (Vite React)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "${workspaceFolder}/dashboard",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "queue-care",
+        "order": 2
+      }
+    },
+    {
+      "name": "Mobile (Flutter)",
+      "type": "dart",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/mobile",
+      "program": "lib/main.dart",
+      "presentation": {
+        "group": "queue-care",
+        "order": 3
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Run All Services (F5)",
+      "configurations": [
+        "Backend (NestJS)",
+        "Dashboard (Vite React)",
+        "Mobile (Flutter)"
+      ],
+      "stopAll": true
+    },
+    {
+      "name": "Run Web Stack (Backend + Dashboard)",
+      "configurations": [
+        "Backend (NestJS)",
+        "Dashboard (Vite React)"
+      ],
+      "stopAll": true
+    }
+  ]
+}
