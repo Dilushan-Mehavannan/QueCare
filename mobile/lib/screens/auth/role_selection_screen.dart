@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile/config/theme.dart';
 import 'package:mobile/providers/auth_provider.dart';
-import 'package:mobile/screens/home/main_navigation_shell.dart';
 
 class RoleSelectionScreen extends ConsumerStatefulWidget {
   const RoleSelectionScreen({super.key});
@@ -18,19 +17,6 @@ class _RoleSelectionScreenState extends ConsumerState<RoleSelectionScreen> {
   @override
   Widget build(BuildContext context) {
     final authState = ref.watch(authProvider);
-
-    // Redirect to home when auth succeeds with role resolved
-    ref.listen(authProvider, (previous, next) {
-      if (next.status == AuthStatus.success && next.role != null) {
-        // Patients route to booking shell, staff to staff view (mocked shell for now)
-        Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(
-            builder: (context) => const MainNavigationShell(),
-          ),
-          (route) => false,
-        );
-      }
-    });
 
     return Scaffold(
       body: Container(

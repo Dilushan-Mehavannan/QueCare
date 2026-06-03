@@ -30,12 +30,15 @@ class _PhoneInputScreenState extends ConsumerState<PhoneInputScreen> {
           ),
         );
       } else if (next.status == AuthStatus.failure && next.errorMessage != null) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(next.errorMessage!),
-            backgroundColor: Colors.redAccent,
-          ),
-        );
+        // Only show snackbar if the failure is from sending OTP (verificationId is null)
+        if (next.verificationId == null) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(next.errorMessage!),
+              backgroundColor: Colors.redAccent,
+            ),
+          );
+        }
       }
     });
 

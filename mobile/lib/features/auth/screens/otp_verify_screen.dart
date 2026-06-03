@@ -5,7 +5,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:pinput/pinput.dart';
 import 'package:mobile/config/theme.dart';
 import 'package:mobile/providers/auth_provider.dart';
-import 'package:mobile/features/auth/screens/role_selection_screen.dart';
 
 class OtpVerifyScreen extends ConsumerStatefulWidget {
   const OtpVerifyScreen({super.key});
@@ -56,13 +55,8 @@ class _OtpVerifyScreenState extends ConsumerState<OtpVerifyScreen> {
     final authState = ref.watch(authProvider);
 
     ref.listen(authProvider, (previous, next) {
-      if (next.status == AuthStatus.roleSelectionRequired) {
-        Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(
-            builder: (context) => const RoleSelectionScreen(),
-          ),
-          (route) => false,
-        );
+      if (next.status == AuthStatus.roleSelectionRequired || next.status == AuthStatus.success) {
+        Navigator.of(context).popUntil((route) => route.isFirst);
       } else if (next.status == AuthStatus.failure && next.errorMessage != null) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
