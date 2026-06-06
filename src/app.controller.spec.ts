@@ -19,4 +19,14 @@ describe('AppController', () => {
       expect(appController.getHello()).toBe('Hello World!');
     });
   });
+
+  describe('privacy', () => {
+    it('should return Privacy Policy HTML string', () => {
+      const html = appController.getPrivacyPolicy();
+      expect(html).toContain('<!DOCTYPE html>');
+      expect(html).toContain('Privacy Policy');
+      expect(html).toContain('QueueCare');
+    });
+  });
 });
+

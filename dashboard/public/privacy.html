@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QueueCare - Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for the QueueCare mobile and web application. Learn how we handle your personal data, location details, and security in real-time clinic queue management." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Premium Tailwind CSS (v4 styling embedded via custom CSS) -->
+    <style>
+      :root {
+        --color-slate-50: #f8fafc;
+        --color-slate-100: #f1f5f9;
+        --color-slate-200: #e2e8f0;
+        --color-slate-300: #cbd5e1;
+        --color-slate-400: #94a3b8;
+        --color-slate-700: #334155;
+        --color-slate-800: #1e293b;
+        --color-slate-900: #0f172a;
+        --color-slate-950: #020617;
+        
+        --color-primary-400: #2dd4bf;
+        --color-primary-500: #14b8a6;
+        --color-primary-600: #0d9488;
+        --color-primary-700: #0f766e;
+        
+        --color-mint-400: #34d399;
+        --color-mint-500: #10b981;
+      }
+
+      body {
+        background-color: var(--color-slate-950);
+        color: var(--color-slate-300);
+        font-family: 'Inter', sans-serif;
+        line-height: 1.625;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1, h2, h3, h4 {
+        font-family: 'Outfit', sans-serif;
+        color: #ffffff;
+        letter-spacing: -0.025em;
+        margin-top: 0;
+      }
+
+      /* Custom scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--color-slate-950);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--color-slate-800);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-primary-700);
+      }
+
+      /* Glow details */
+      .glow-blob {
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(20, 184, 166, 0.12) 0%, rgba(16, 185, 129, 0.05) 50%, rgba(2, 6, 23, 0) 100%);
+        filter: blur(40px);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* Glassmorphism containers */
+      .glass-card {
+        background: rgba(15, 23, 42, 0.65);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Glowing indicators */
+      .pulse-glow-teal {
+        box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.4);
+        animation: pulse-teal 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      @keyframes pulse-teal {
+        0% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.5);
+        }
+        70% {
+          transform: scale(1);
+          box-shadow: 0 0 0 8px rgba(20, 184, 166, 0);
+        }
+        100% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(20, 184, 166, 0);
+        }
+      }
+
+      /* Custom list bullets */
+      .bullet-list li {
+        position: relative;
+        padding-left: 1.75rem;
+        margin-bottom: 0.75rem;
+        list-style: none;
+      }
+      .bullet-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.625rem;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--color-primary-400);
+        box-shadow: 0 0 8px var(--color-primary-400);
+      }
+    </style>
+  </head>
+  <body class="relative min-h-screen selection:bg-teal-500/30 selection:text-white">
+    <!-- Ambient Blur Background Blobs -->
+    <div class="glow-blob" style="top: 5%; left: -10%;"></div>
+    <div class="glow-blob" style="top: 45%; right: -10%;"></div>
+    <div class="glow-blob" style="bottom: 5%; left: 15%;"></div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 w-full border-b border-slate-900 bg-slate-950/80 backdrop-blur-md">
+      <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 sm:px-8">
+        <div class="flex items-center gap-3.5">
+          <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-primary-600 to-mint-500 text-white shadow-lg shadow-teal-500/20">
+            <!-- Simple clean inline heartbeat/pulse icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+              <path d="M3.22 12H9.5l1.5-3 2 6 1.5-3h4.28"/>
+            </svg>
+          </div>
+          <div>
+            <span class="font-outfit text-xl font-bold tracking-tight text-white bg-gradient-to-r from-primary-400 to-mint-400 bg-clip-text text-transparent">QueueCare</span>
+            <span class="ml-1.5 rounded-full bg-slate-900 px-2 py-0.5 text-[10px] font-semibold tracking-widest text-slate-400 uppercase border border-slate-800">Policy</span>
+          </div>
+        </div>
+        
+        <a id="btn-back-dashboard" href="/" class="flex items-center gap-2 rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200 border border-slate-800 hover:border-slate-700 hover:bg-slate-800 hover:text-white transition duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to App
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="mx-auto max-w-7xl px-6 py-12 sm:px-8 lg:py-16 relative z-10">
+      
+      <!-- Page Title & Hero -->
+      <section class="mb-16 text-center lg:text-left">
+        <h1 class="font-outfit text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">
+          Privacy Policy
+        </h1>
+        <div class="mt-4 flex flex-wrap items-center justify-center lg:justify-start gap-3 text-sm text-slate-400">
+          <span>Effective Date: <strong>June 5, 2026</strong></span>
+          <span class="hidden sm:inline">•</span>
+          <span>Last Updated: <strong>June 5, 2026</strong></span>
+          <span class="hidden sm:inline">•</span>
+          <span class="flex items-center gap-1.5 rounded-full bg-teal-500/10 px-3 py-1 font-semibold text-teal-400 border border-teal-500/20">
+            <span class="h-1.5 w-1.5 rounded-full bg-teal-400 pulse-glow-teal"></span>
+            Active Compliance Version
+          </span>
+        </div>
+        <p class="mt-6 max-w-3xl text-lg text-slate-400">
+          At QueueCare, we value your health and your privacy. This Privacy Policy describes how we collect, protect, store, and utilize your personal information when you use the QueueCare Patient Mobile Application and the QueueCare Clinic Administration Dashboard.
+        </p>
+      </section>
+
+      <!-- Two-Column Layout (TOC and Content) -->
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-4 lg:items-start">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="lg:sticky lg:top-28 col-span-1 rounded-2xl glass-card p-6 border border-slate-900 hidden lg:block">
+          <h2 class="font-outfit text-sm font-bold tracking-widest text-slate-400 uppercase mb-4 border-b border-slate-800 pb-2">Sections</h2>
+          <nav class="space-y-1">
+            <a id="link-section-1" href="#introduction" class="block rounded-lg px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-900/60 font-medium transition duration-150">1. Introduction</a>
+            <a id="link-section-2" href="#information-collection" class="block rounded-lg px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-900/60 font-medium transition duration-150">2. Information We Collect</a>
+            <a id="link-section-3" href="#use-of-information" class="block rounded-lg px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-900/60 font-medium transition duration-150">3. How We Use Your Data</a>
+            <a id="link-section-4" href="#location-data" class="block rounded-lg px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-900/60 font-medium transition duration-150">4. Location & Background Services</a>
+            <a id="link-section-5" href="#security-retention" class="block rounded-lg px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-900/60 font-medium transition duration-150">5. Security & Retention</a>
+            <a id="link-section-6" href="#your-rights" class="block rounded-lg px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-900/60 font-medium transition duration-150">6. Your Rights & Choice</a>
+            <a id="link-section-7" href="#contact-us" class="block rounded-lg px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-900/60 font-medium transition duration-150">7. Contact Information</a>
+          </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="col-span-1 lg:col-span-3 space-y-12 rounded-3xl glass-card p-8 sm:p-12 border border-slate-900">
+          
+          <!-- Section 1 -->
+          <section id="introduction" class="scroll-mt-28">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-teal-500/10 text-teal-400 text-xs font-bold font-outfit border border-teal-500/20">01</span>
+              <h2 class="text-2xl font-bold tracking-tight text-white">Introduction</h2>
+            </div>
+            <p class="text-slate-400 mb-4">
+              QueueCare operates a real-time queue management system intended to minimize waiting room congestion, optimize patient workflow, and help patients wait where they are most comfortable.
+            </p>
+            <p class="text-slate-400">
+              By installing the QueueCare mobile application or accessing our online dashboard, you agree to the collection and use of information in accordance with this policy. We prioritize data protection compliance under standard health informatics privacy regulations and standard app store requirements.
+            </p>
+          </section>
+
+          <hr class="border-slate-900" />
+
+          <!-- Section 2 -->
+          <section id="information-collection" class="scroll-mt-28">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-teal-500/10 text-teal-400 text-xs font-bold font-outfit border border-teal-500/20">02</span>
+              <h2 class="text-2xl font-bold tracking-tight text-white">Information We Collect</h2>
+            </div>
+            <p class="text-slate-400 mb-4">
+              We collect information to deliver efficient real-time routing, ticket management, and wait-time notifications:
+            </p>
+            <ul class="bullet-list text-slate-400 space-y-2 mb-6">
+              <li><strong>Account Registration Info</strong>: Your phone number, email address, name, and login credentials when registering.</li>
+              <li><strong>Patient Profile Metadata</strong>: Optional information like age/date of birth and gender to display context for clinics.</li>
+              <li><strong>Queue Interaction Records</strong>: History of booked slots, checked-in tickets, cancellations, no-show status, and live queue positions.</li>
+              <li><strong>Device & Notification Identifiers</strong>: Firebase Cloud Messaging (FCM) tokens required to push live wait updates directly to your screen.</li>
+            </ul>
+            <div class="rounded-xl bg-slate-950 p-5 border border-slate-900">
+              <h3 class="font-outfit font-semibold text-white text-base mb-2 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                </svg>
+                Note on Medical Information
+              </h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                QueueCare manages queue positions and appointments. We do <strong>not</strong> request, store, or process complete Electronic Medical Records (EMR) or diagnostic logs. Your tickets contain only basic queue classification tags (e.g., "General Checkup", "Pediatrics").
+              </p>
+            </div>
+          </section>
+
+          <hr class="border-slate-900" />
+
+          <!-- Section 3 -->
+          <section id="use-of-information" class="scroll-mt-28">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-teal-500/10 text-teal-400 text-xs font-bold font-outfit border border-teal-500/20">03</span>
+              <h2 class="text-2xl font-bold tracking-tight text-white">How We Use Your Data</h2>
+            </div>
+            <p class="text-slate-400 mb-4">
+              We process data solely to execute the queue scheduling operations:
+            </p>
+            <ul class="bullet-list text-slate-400 space-y-2">
+              <li><strong>Queue Positioning</strong>: Generating and updating ticket sequences and status.</li>
+              <li><strong>Wait-Time Predictions</strong>: Analyzing wait trends to estimate when you should arrive at the clinic.</li>
+              <li><strong>Push Alerts & WebSocket Updates</strong>: Instantly notifying you when your queue number is near or when a delay occurs.</li>
+              <li><strong>Clinic Communications</strong>: Sharing your checked-in status and name with the clinic administrative desk you are actively visiting.</li>
+            </ul>
+          </section>
+
+          <hr class="border-slate-900" />
+
+          <!-- Section 4 -->
+          <section id="location-data" class="scroll-mt-28">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-teal-500/10 text-teal-400 text-xs font-bold font-outfit border border-teal-500/20">04</span>
+              <h2 class="text-2xl font-bold tracking-tight text-white">Location Services & Background Tracking</h2>
+            </div>
+            <p class="text-slate-400 mb-4">
+              To support clinic discovery and active ticket check-ins, the QueueCare mobile application utilizes location data:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+              <div class="rounded-xl bg-slate-950/60 p-5 border border-slate-900">
+                <h3 class="font-outfit font-semibold text-white text-sm uppercase tracking-wider mb-2 text-teal-400">1. Clinic Discovery</h3>
+                <p class="text-xs text-slate-400">
+                  When you open the app to search for nearby medical services, we request access to your device location to list closest clinics.
+                </p>
+              </div>
+              <div class="rounded-xl bg-slate-950/60 p-5 border border-slate-900">
+                <h3 class="font-outfit font-semibold text-white text-sm uppercase tracking-wider mb-2 text-emerald-400">2. Auto-Checkin / Geofencing</h3>
+                <p class="text-xs text-slate-400">
+                  With your permission, we utilize geofencing to verify you have physically arrived at the clinic venue to update your ticket status to "Present".
+                </p>
+              </div>
+            </div>
+            <p class="text-slate-400">
+              <strong>Background Access</strong>: You may choose to deny background location access. In that case, you will simply have to check in manually via the app while it is open in the foreground, or request receptionist check-in. We do not sell or share location history logs with any third parties.
+            </p>
+          </section>
+
+          <hr class="border-slate-900" />
+
+          <!-- Section 5 -->
+          <section id="security-retention" class="scroll-mt-28">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-teal-500/10 text-teal-400 text-xs font-bold font-outfit border border-teal-500/20">05</span>
+              <h2 class="text-2xl font-bold tracking-tight text-white">Data Security & Retention</h2>
+            </div>
+            <p class="text-slate-400 mb-4">
+              All communications between the mobile app, dashboard portal, and server are secured using Transport Layer Security (TLS/HTTPS). JWT (JSON Web Tokens) are utilized to authenticate every request securely.
+            </p>
+            <p class="text-slate-400">
+              We retain account data as long as your account remains active. If your account remains inactive for over 24 months, or if you request deletion, we permanently purge or anonymize your logs, except as required to fulfill tax or legal recordkeeping.
+            </p>
+          </section>
+
+          <hr class="border-slate-900" />
+
+          <!-- Section 6 -->
+          <section id="your-rights" class="scroll-mt-28">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-teal-500/10 text-teal-400 text-xs font-bold font-outfit border border-teal-500/20">06</span>
+              <h2 class="text-2xl font-bold tracking-tight text-white">Your Rights & Choices</h2>
+            </div>
+            <p class="text-slate-400 mb-4">
+              Depending on your jurisdiction (such as under standard global data directives), you hold legal control over your personal records:
+            </p>
+            <ul class="bullet-list text-slate-400 space-y-2">
+              <li><strong>Access & Export</strong>: You can request copies of all records stored with QueueCare.</li>
+              <li><strong>Correction</strong>: You can update your profile, phone number, and name directly inside the settings panel.</li>
+              <li><strong>Erasure</strong>: You may submit a request to permanently terminate your account and wipe all transaction history.</li>
+              <li><strong>Permission Toggles</strong>: You can turn off device location tracking, camera permissions (for QR codes), and push notifications at any point inside your OS system settings.</li>
+            </ul>
+          </section>
+
+          <hr class="border-slate-900" />
+
+          <!-- Section 7 -->
+          <section id="contact-us" class="scroll-mt-28">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-teal-500/10 text-teal-400 text-xs font-bold font-outfit border border-teal-500/20">07</span>
+              <h2 class="text-2xl font-bold tracking-tight text-white">Contact Information</h2>
+            </div>
+            <p class="text-slate-400 mb-6">
+              If you have any questions, clarifications, compliance requests, or need to request the deletion of your account records, please contact our support desk:
+            </p>
+            <div class="rounded-2xl bg-gradient-to-tr from-slate-900 to-slate-950 p-6 border border-slate-900 flex flex-col sm:flex-row gap-6 justify-between items-start sm:items-center">
+              <div>
+                <p class="text-white font-semibold font-outfit text-base">QueueCare Operations Team</p>
+                <p class="text-xs text-slate-400 mt-1">Direct support & compliance inquiry desk</p>
+              </div>
+              <div class="flex flex-col gap-1 text-sm">
+                <span class="text-slate-400">Email: <a id="link-support-email" href="mailto:support@queuecare.app" class="text-teal-400 hover:text-teal-300 font-medium transition">support@queuecare.app</a></span>
+                <span class="text-slate-400">Web: <a id="link-support-website" href="https://queuecare.app" target="_blank" class="text-teal-400 hover:text-teal-300 font-medium transition">queuecare.app</a></span>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Simple Sleek Footer -->
+    <footer class="mt-20 border-t border-slate-900 bg-slate-950 py-10 relative z-10 text-center text-xs text-slate-500">
+      <div class="mx-auto max-w-7xl px-6 sm:px-8">
+        <p>© 2026 QueueCare. All rights reserved. Managed under global HIPAA & mobile software listing compliance standards.</p>
+      </div>
+    </footer>
+  </body>
+</html>
