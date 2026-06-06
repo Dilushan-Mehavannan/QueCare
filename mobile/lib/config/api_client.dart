@@ -5,7 +5,7 @@ class ApiClient {
 
   // We point to 10.0.2.2 for Android Emulator, and localhost for iOS/others
   // You can customize this to your actual network IP (e.g. 192.168.1.50)
-  static const String baseServerUrl = 'http://10.0.2.2:3000'; 
+  static const String baseServerUrl = 'http://192.168.8.151:3000'; 
 
   ApiClient()
       : dio = Dio(
